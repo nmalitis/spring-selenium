@@ -12,6 +12,7 @@ public class WindowSwitchService {
     private ApplicationContext ctx;
 
     public void switchByTitle(final String title) {
+        System.out.println("Te tiek");
         WebDriver driver = this.ctx.getBean(WebDriver.class);
         driver.getWindowHandles()
                 .stream()

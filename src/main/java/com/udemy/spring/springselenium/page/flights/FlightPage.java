@@ -1,10 +1,13 @@
 package com.udemy.spring.springselenium.page.flights;
 
 import com.udemy.spring.springselenium.operations.annotation.Page;
+import com.udemy.spring.springselenium.operations.annotation.TakeScreenshot;
 import com.udemy.spring.springselenium.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -19,6 +22,7 @@ public class FlightPage extends Base {
         this.driver.manage().window().maximize();
     }
 
+    @TakeScreenshot
     public List<String> getLabels(){
         return this.elements
                 .stream()
@@ -27,6 +31,7 @@ public class FlightPage extends Base {
                 .collect(Collectors.toList());
 
     }
+
 
     @Override
     public boolean isAt() {

@@ -1,11 +1,11 @@
 package com.udemy.spring.springselenium.page.window;
 
-import com.udemy.spring.springselenium.operations.annotation.Page;
+import com.udemy.spring.springselenium.operations.annotation.Window;
 import com.udemy.spring.springselenium.page.Base;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-@Page
+@Window("Page B")
 public class PageB extends Base {
 
     @FindBy(id = "area")
